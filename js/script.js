@@ -89,4 +89,16 @@ $(document).ready(function () {
     $(".menu-wrap").toggleClass("open");
     $("body, html").toggleClass("overflow");
   });
+
+  $(window).scroll(function () {
+    var sticky = $(".top-scroll"),
+      scroll = $(window).scrollTop();
+
+    if (scroll >= 200) sticky.addClass("show");
+    else sticky.removeClass("show");
+  });
+
+  $(".top-scroll").smoothScroll({
+    speed: 1000,
+  });
 });
