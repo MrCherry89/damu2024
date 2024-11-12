@@ -292,6 +292,9 @@
         background: $blue;
         @include flex;
         z-index: 10;
+        &:hover {
+          background: lighten($blue, 7%);
+        }
         @media (max-width: 1650px) {
           width: 60px;
           height: 60px;
@@ -1211,6 +1214,9 @@ footer {
       z-index: 10;
       transform: translate(0, 0);
       position: static;
+      &:hover {
+        background: lighten($blue, 7%);
+      }
       @media (max-width: 1650px) {
         width: 60px;
         height: 60px;

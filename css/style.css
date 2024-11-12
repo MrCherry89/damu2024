@@ -478,7 +478,7 @@ a:focus {
   }
 }
 .top-scroll:hover .icon {
-  background: #042b62;
+  background: #939393;
 }
 .top-scroll:hover .icon svg {
   fill: white;
@@ -878,6 +878,9 @@ a:focus {
   display: -ms-flexbox;
   display: flex;
   z-index: 10;
+}
+.unique-features .unique-features-slider-wrap .slider-navigation button:hover {
+  background: #053a84;
 }
 @media (max-width: 1650px) {
   .unique-features .unique-features-slider-wrap .slider-navigation button {
@@ -2090,6 +2093,9 @@ footer.green-footer {
   z-index: 10;
   transform: translate(0, 0);
   position: static;
+}
+.slider-title-wrap .slider-navigation button:hover {
+  background: #053a84;
 }
 @media (max-width: 1650px) {
   .slider-title-wrap .slider-navigation button {

@@ -101,4 +101,6 @@ $(document).ready(function () {
   $(".top-scroll").smoothScroll({
     speed: 1000,
   });
+
+  AOS.init();
 });
