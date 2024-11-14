@@ -31,6 +31,36 @@ $(document).ready(function () {
     nextArrow: $(".videos .slider-navigation .slick-next"),
   });
 
+  $(".contacts-slider").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    speed: 800,
+    dots: false,
+    prevArrow: $(".contacts .slider-navigation .slick-prev"),
+    nextArrow: $(".contacts .slider-navigation .slick-next"),
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  });
+
+  $(".advertiser .next").on("click", function () {
+    $(".advertiser-form-wrap").addClass("show");
+  });
+
   $(".phone-number-input").inputmask({
     mask: "+7 (999)-999-999-9",
   });
@@ -51,6 +81,11 @@ $(document).ready(function () {
       $("#application-form").hide(); // Скрываем первую форму
       $("#second-form").show(); // Показываем вторую форму
     },
+  });
+
+  $("#advertiser-form").validate({
+    errorClass: "error",
+    errorPlacement: function (error, element) {},
   });
 
   // Кнопка отправки для первой формы

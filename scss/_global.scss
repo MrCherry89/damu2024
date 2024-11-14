@@ -81,6 +81,30 @@ a {
   padding: 0 20px;
 }
 
+.title-style {
+  color: #011936;
+  font-family: "Atyp Regular Variable";
+  font-size: 44.69px;
+  font-style: normal;
+  font-weight: 75;
+  display: inline-block;
+  line-height: 110%;
+  letter-spacing: -0.67px;
+  padding-bottom: 10px;
+  border-bottom: 7px solid $green;
+  @media (max-width: 1024px) {
+    font-size: 32px;
+    border-width: 5px;
+    padding-bottom: 8px;
+  }
+  @media (max-width: 767px) {
+    font-size: 28px;
+  }
+  &.pink {
+    border-color: #b13b62;
+  }
+}
+
 .main-title {
   margin-bottom: 30px;
   text-transform: uppercase;
@@ -167,6 +191,79 @@ a {
   }
   @media (max-width: 767px) {
     height: 80vw;
+  }
+}
+
+.radio-wrap {
+  input[type="radio"] {
+    display: none;
+  }
+
+  input:checked + label {
+    outline: 3px solid #b13b62;
+  }
+
+  label {
+    border-radius: 20px;
+    background: white;
+    @include flex;
+    height: 100%;
+    @include dir-col;
+    outline: 3px solid transparent;
+    min-height: 300px;
+    overflow: hidden;
+    position: relative;
+    @media (max-width: 767px) {
+      min-height: auto;
+    }
+    &:hover {
+      .img {
+        transform: translateY(5px);
+      }
+    }
+    span {
+      font-size: 28px;
+      font-weight: normal;
+      color: #000;
+      display: block;
+      padding: 20px;
+      margin-bottom: 40px;
+      @media (max-width: 1300px) {
+        font-size: 24px;
+      }
+      @media (max-width: 767px) {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      &.img {
+        @include flex;
+        border-radius: 20px;
+        height: 195px;
+        padding: 0;
+        overflow: hidden;
+        transform: translateY(70px);
+        transition: 0.3s;
+        position: absolute;
+        margin-bottom: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        @media (max-width: 1300px) {
+          height: 180px;
+        }
+        @media (max-width: 1024px) {
+          transform: translateY(5px);
+        }
+        @media (max-width: 767px) {
+          position: static;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
   }
 }
 
