@@ -31,6 +31,16 @@ $(document).ready(function () {
     nextArrow: $(".videos .slider-navigation .slick-next"),
   });
 
+  $(".our-instagram-slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    variableWidth: true,
+    autoplay: true,
+    speed: 900,
+  });
+
   $(".contacts-slider").slick({
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -55,6 +65,18 @@ $(document).ready(function () {
         },
       },
     ],
+  });
+
+  $(".popup-gallery").magnificPopup({
+    delegate: "a",
+    type: "image",
+    tLoading: "Loading image #%curr%...",
+    mainClass: "mfp-img-mobile",
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0, 1], // Will preload 0 - before current, and 1 after the current image
+    },
   });
 
   $(".advertiser .next").on("click", function () {

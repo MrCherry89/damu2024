@@ -134,6 +134,11 @@ a {
 .tab-list {
   display: flex;
   flex-wrap: wrap;
+  &.green-style {
+    li.active {
+      background: $green;
+    }
+  }
 }
 
 .tab-list li {
