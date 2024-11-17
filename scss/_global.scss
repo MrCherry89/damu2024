@@ -83,8 +83,7 @@ a {
 
 .title-style {
   color: #011936;
-  font-family: "Atyp Regular Variable";
-  font-size: 44.69px;
+  font-size: 44px;
   font-style: normal;
   font-weight: 75;
   display: inline-block;
@@ -565,5 +564,45 @@ a {
   }
   &.show {
     opacity: 1;
+  }
+}
+
+.slick-dots {
+  bottom: -45px;
+  left: 0px;
+  @include flex;
+  @include align-center;
+  @include justify-center;
+  @media (max-width: 1024px) {
+    bottom: -25px;
+  }
+  li {
+    width: 86px;
+    height: 12px;
+    margin: 0 12px;
+    @media (max-width: 1024px) {
+      width: 24px;
+      height: 6px;
+      margin: 0 4px;
+    }
+    button {
+      width: 86px;
+      height: 12px;
+      padding: 0;
+      background: #d9d9d9;
+      border-radius: 50px;
+      @media (max-width: 1024px) {
+        width: 24px;
+        height: 6px;
+      }
+      &:before {
+        content: none;
+      }
+    }
+    &.slick-active {
+      button {
+        background: #89b13b;
+      }
+    }
   }
 }

@@ -67,6 +67,139 @@ $(document).ready(function () {
     ],
   });
 
+  $(".news-slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "290px",
+    dots: true,
+    speed: 800,
+    autoplay: true,
+    responsive: [
+      {
+        breakpoint: 1921,
+        settings: {
+          centerPadding: "100px",
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          centerPadding: "0px",
+        },
+      },
+    ],
+  });
+
+  $(".amenities-slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "20px",
+    dots: false,
+    variableWidth: true,
+    speed: 800,
+    autoplay: true,
+    responsive: [
+      {
+        breakpoint: 1921,
+        settings: {
+          centerPadding: "100px",
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          centerPadding: "0px",
+          variableWidth: false,
+        },
+      },
+    ],
+  });
+
+  $(".footcourt-slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    centerMode: true,
+    centerPadding: "20px",
+    dots: false,
+    variableWidth: true,
+    speed: 800,
+    autoplaSpeed: 2200,
+    autoplay: true,
+    responsive: [
+      {
+        breakpoint: 1921,
+        settings: {
+          centerPadding: "100px",
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          centerPadding: "0px",
+          variableWidth: false,
+        },
+      },
+    ],
+  });
+
+  $(".info-slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 1921,
+        settings: {
+          centerPadding: "100px",
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          centerPadding: "0px",
+          variableWidth: false,
+        },
+      },
+    ],
+  });
+
+  $(".services-slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    variableWidth: true,
+    speed: 800,
+    autoplay: true,
+    prevArrow: $(".services .slider-navigation .slick-prev"),
+    nextArrow: $(".services .slider-navigation .slick-next"),
+  });
+
+  $(".banner-slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    variableWidth: true,
+    centerMode: true,
+    centerPadding: "100px",
+    speed: 1000,
+    autoplay: true,
+    focusOnSelect: true,
+    autoplaySpeed: 2000,
+    cssEase: "ease-in-out",
+    adaptiveHeight: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          centerPadding: "0px",
+          variableWidth: false,
+        },
+      },
+    ],
+  });
+
   $(".popup-gallery").magnificPopup({
     delegate: "a",
     type: "image",
@@ -75,7 +208,7 @@ $(document).ready(function () {
     gallery: {
       enabled: true,
       navigateByImgClick: true,
-      preload: [0, 1], // Will preload 0 - before current, and 1 after the current image
+      preload: [0, 1],
     },
   });
 
