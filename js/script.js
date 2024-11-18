@@ -7,6 +7,16 @@ $(document).ready(function () {
     speed: 800,
     prevArrow: $(".unique-features-slider-wrap .slider-navigation .slick-prev"),
     nextArrow: $(".unique-features-slider-wrap .slider-navigation .slick-next"),
+    responsive: [
+      {
+        breakpoint: 1025,
+        settings: {
+          slidesToShow: 1,
+          variableWidth: true,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   });
 
   $(".advantages-slider").slick({
@@ -108,10 +118,10 @@ $(document).ready(function () {
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 1025,
         settings: {
           centerPadding: "0px",
-          variableWidth: false,
+          centerMode: false,
         },
       },
     ],
@@ -135,10 +145,10 @@ $(document).ready(function () {
         },
       },
       {
-        breakpoint: 768,
+        breakpoint: 1025,
         settings: {
           centerPadding: "0px",
-          variableWidth: false,
+          centerMode: false,
         },
       },
     ],
@@ -290,6 +300,26 @@ $(document).ready(function () {
 
   $(".top-scroll").smoothScroll({
     speed: 1000,
+  });
+
+  $(".shops-slider").slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    variableWidth: true,
+    cssEase: "ease-in-out",
+    prevArrow: $("#shops-popup .slider-navigation .slick-prev"),
+    nextArrow: $("#shops-popup .slider-navigation .slick-next"),
+  });
+
+  $(".popup").magnificPopup({
+    type: "inline",
+    midClick: true,
+    callbacks: {
+      open: function () {
+        $(".shops-slider").slick("setPosition");
+      },
+    },
   });
 
   AOS.init();

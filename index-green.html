@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/slick.css" />
     <link rel="stylesheet" href="css/slick-theme.css" />
     <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
@@ -87,16 +88,20 @@
 
     <div class="shops">
       <div class="wrapper">
-        <div class="title-wrap-nav">
-          <div class="title-style">Магазины</div>
-          <div class="slider-navigation">
-            <button type="button" class="slick-prev">
-              <img src="img/slider-arrow.svg" alt="" />
-            </button>
-            <button type="button" class="slick-next">
-              <img src="img/slider-arrow.svg" alt="" />
-            </button>
-          </div>
+        <div class="title-style">Магазины</div>
+        <div class="shops-items">
+          <a href="#shops-popup" class="shops-item popup">
+            <img src="img/shops-img1.png" alt="" />
+          </a>
+          <a href="#shops-popup" class="shops-item popup">
+            <img src="img/shops-img2.png" alt="" />
+          </a>
+          <a href="#shops-popup" class="shops-item popup">
+            <img src="img/shops-img3.png" alt="" />
+          </a>
+          <a href="#shops-popup" class="shops-item popup">
+            <img src="img/shops-img4.png" alt="" />
+          </a>
         </div>
       </div>
     </div>
@@ -414,5 +419,53 @@
     <script src="js/script.js"></script>
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/aos.js"></script>
+
+    <div id="shops-popup" class="mfp-hide white-popup mfp-with-anim main-popup">
+      <div class="popup-body">
+        <button title="Close (Esc)" type="button" class="mfp-close"></button>
+        <div class="slider-wrapper">
+          <div class="title-wrap">
+            <div
+              class="title-style"
+              data-aos="zoom"
+              data-aos-offset="-100"
+              data-aos-delay="200"
+              data-aos-duration="800"
+              data-aos-easing="ease-in-out"
+            >
+              Услуги
+            </div>
+            <div class="slider-navigation">
+              <button type="button" class="slick-prev">
+                <img src="img/slider-arr-purple.svg" alt="" />
+              </button>
+              <button type="button" class="slick-next">
+                <img src="img/slider-arr-purple.svg" alt="" />
+              </button>
+            </div>
+          </div>
+          <div class="shops-slider">
+            <div class="item">
+              <img src="img/shops-slider-img1.png" alt="" />
+            </div>
+            <div class="item">
+              <img src="img/shops-slider-img2.png" alt="" />
+            </div>
+            <div class="item">
+              <img src="img/shops-slider-img3.png" alt="" />
+            </div>
+            <div class="item">
+              <img src="img/shops-slider-img1.png" alt="" />
+            </div>
+            <div class="item">
+              <img src="img/shops-slider-img2.png" alt="" />
+            </div>
+            <div class="item">
+              <img src="img/shops-slider-img3.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

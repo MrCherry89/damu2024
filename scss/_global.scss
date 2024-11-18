@@ -81,6 +81,126 @@ a {
   padding: 0 20px;
 }
 
+#shops-popup {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  .popup-body {
+    border-radius: 20px;
+    background: #8579c3;
+    padding: 50px;
+    position: relative;
+    z-index: 0;
+    @media (max-width: 767px) {
+      padding: 50px 20px;
+      padding-right: 0;
+    }
+    .mfp-close {
+      position: absolute;
+      top: -50px;
+      right: 0;
+      width: 32px;
+      height: 32px;
+      z-index: 10;
+      &:after {
+        content: "";
+        background: url(../img/close-popup.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 32px;
+        height: 32px;
+        opacity: 1;
+        z-index: 10;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      &:before {
+        content: none;
+      }
+    }
+    .title-wrap {
+      @include flex;
+      @include align-center;
+      @include justify-between;
+      margin-bottom: 30px;
+      @media (max-width: 767px) {
+        padding-right: 20px;
+      }
+      .title-style {
+        color: white;
+        border-color: white;
+      }
+      .slider-navigation {
+        position: static;
+        @include flex;
+        @include justify-between;
+        width: 190px;
+        @media (max-width: 1024px) {
+          width: 90px;
+        }
+        button {
+          width: 86px;
+          height: 42px;
+          border-radius: 40px;
+          background: white;
+          @include flex;
+          z-index: 10;
+          transform: translate(0, 0);
+          position: static;
+          @media (max-width: 1024px) {
+            width: 40px;
+            height: 30px;
+            position: static;
+            transform: translate(0, 0);
+          }
+          img {
+            margin: auto;
+            width: 30px;
+            @media (max-width: 1024px) {
+              width: 18px;
+            }
+          }
+          &.slick-prev {
+            left: -120px;
+            @media (max-width: 1650px) {
+              left: -20px;
+            }
+            @media (max-width: 1024px) {
+              left: -10px;
+            }
+            img {
+              transform: rotate(180deg);
+            }
+          }
+          &.slick-next {
+            right: -120px;
+            @media (max-width: 1650px) {
+              right: -20px;
+            }
+            @media (max-width: 1024px) {
+              right: -10px;
+            }
+          }
+          &:before {
+            content: none;
+          }
+        }
+      }
+    }
+    .shops-slider {
+      .item {
+        margin-left: 20px;
+        width: 260px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
 .title-style {
   color: #011936;
   font-size: 44px;
